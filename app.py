@@ -276,6 +276,7 @@ def images_file(filename):
     # Map friendly names to actual files present in Images/
     fallback_map = {
         'RitsLogoLight.png': 'Ritslog1.png',
+        'RitsLogoLight1.png': 'Ritslog1.png',
         'RitsLogoLight.jpg': 'Ritslog1.png',
         'RitsLogoLight.jpeg': 'Ritslog1.png',
     }
