@@ -284,8 +284,20 @@ textarea{min-height:140px;resize:vertical}
 .job h3{font-size:17px;font-weight:700;margin-bottom:5px}
 .job .job-meta{font-size:13px;color:var(--text-muted)}
 
-footer.site-footer{margin-top:50px;text-align:center;color:var(--text-muted);font-size:13px;
-  padding-top:24px;border-top:1px solid var(--divider);line-height:1.8}
+/* Footer layout */
+.site-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:26px 18px;margin-top:32px;color:var(--text-soft);font-size:14px;border-top:1px solid var(--divider)}
+.site-footer .footer-left{flex:1}
+.site-footer .footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.social-links{list-style:none;display:flex;gap:14px;padding:0;margin:0}
+.social-links li{font-size:14px}
+.social-links a{color:var(--text-soft);text-decoration:none}
+.social-links a:hover{text-decoration:underline;color:var(--accent)}
+
+@media (max-width:900px){
+  .site-footer{flex-direction:column;align-items:center;text-align:center}
+  .site-footer .footer-right{align-items:center}
+  .social-links{flex-direction:column;gap:6px}
+}
 
 .section-gap{margin-top:26px}
 .center{text-align:center}

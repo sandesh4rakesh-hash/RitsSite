@@ -135,8 +135,16 @@
 {% block content %}{% endblock %}
 
 <footer class="site-footer">
-  © {{ now.year }} RITS Services — {{ t.hero.tagline }} {{ t.footer_rights }}<br>
-  {{ t.hero.address }}
+  <div class="footer-left">© {{ now.year }} RITS Services — {{ t.hero.tagline }} {{ t.footer_rights }}</div>
+  <div class="footer-right">
+    <div class="social-ecosystem"><strong>Social Ecosystem</strong></div>
+    <ul class="social-links">
+      <li>📸 <a href="https://instagram.com/ritsservices" target="_blank" rel="noopener">Instagram: @ritsservices</a></li>
+      <li>🐦 <a href="https://x.com/ritsservicescom" target="_blank" rel="noopener">X / Twitter: @ritsservicescom</a></li>
+      <li>📺 <a href="https://youtube.com/@ritsservices" target="_blank" rel="noopener">YouTube: @ritsservices</a></li>
+    </ul>
+    <div class="address">{{ t.hero.address }}</div>
+  </div>
 </footer>
 
 </div>
