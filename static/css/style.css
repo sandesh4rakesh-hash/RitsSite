@@ -287,8 +287,9 @@ textarea{min-height:140px;resize:vertical}
 /* Footer layout */
 .site-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:26px 18px;margin-top:32px;color:var(--text-soft);font-size:14px;border-top:1px solid var(--divider)}
 .site-footer .footer-left{flex:1}
-.site-footer .footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.site-footer .footer-right{display:flex;flex-direction:row;align-items:center;gap:22px}
 .social-links{list-style:none;display:flex;gap:14px;padding:0;margin:0}
+.social-ecosystem{display:none}
 .social-links li{font-size:14px}
 .social-links a{color:var(--text-soft);text-decoration:none}
 .social-links a:hover{text-decoration:underline;color:var(--accent)}
