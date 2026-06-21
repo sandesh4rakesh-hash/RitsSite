@@ -275,10 +275,10 @@ def images_file(filename):
     # Provide fallbacks for filenames that may not exactly match uploaded files
     # Map friendly names to actual files present in Images/
     fallback_map = {
-        'RitsLogoLight.png': 'Ritslog1.png',
-        'RitsLogoLight1.png': 'Ritslog1.png',
-        'RitsLogoLight.jpg': 'Ritslog1.png',
-        'RitsLogoLight.jpeg': 'Ritslog1.png',
+        'RitsLogoLight.png': 'RitsLogoLight1.png',
+        'RitsLogoLight1.png': 'RitsLogoLight1.png',
+        'RitsLogoLight.jpg': 'RitsLogoLight1.png',
+        'RitsLogoLight.jpeg': 'RitsLogoLight1.png',
     }
     requested = filename
     full_path = os.path.join(images_dir, requested)

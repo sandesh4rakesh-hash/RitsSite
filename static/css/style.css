@@ -161,11 +161,11 @@ h1.hero-title{font-size:clamp(34px,4.4vw,54px);font-weight:800;line-height:1.12;
 .btn-secondary .arrow-circle{background:transparent}
 
 .hero-visual{display:flex;flex-direction:column;align-items:center;gap:8px;position:relative}
-.orbit{position:relative;width:min(400px,90%);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.orbit{position:relative;width:min(400px,90%);aspect-ratio:1;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .orbit::before,.orbit::after{content:"";position:absolute;inset:0;border-radius:22%;border:1px dashed var(--icon-ring);opacity:.5}
 .orbit::after{inset:10%;border-style:solid;border-color:var(--icon-ring);opacity:.3;animation:spin 40s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-  .logo-svg{width:86%;max-width:520px;filter:drop-shadow(0 28px 60px rgba(10,90,220,.6)) saturate(1.08) contrast(1.08);animation:float 6s ease-in-out infinite}
+  .logo-svg{display:block;width:111%;max-width:520px;height:auto;object-fit:contain;filter:drop-shadow(0 28px 60px rgba(10,90,220,.6)) saturate(1.08) contrast(1.08);animation:float 6s ease-in-out infinite;margin:0 auto}
 
 /* Light-theme specific hero logo */
   .logo-svg-light{display:none}
