@@ -15,13 +15,16 @@
 
   <div class="hero-visual">
     <div class="orbit">
-      <!-- Dark-theme / default logo image -->
-      <img class="logo-svg logo-svg-dark" src="{{ url_for('static', filename='images/Ritslog.png') }}" aria-label="RITS Services logo" alt="RITS logo">
-      <!-- Light-theme raster logo (optional) - shown only in light theme -->
-      <img class="logo-svg logo-svg-light" src="{{ url_for('static', filename='images/RitsLogoLight3.png') }}" aria-label="RITS Services logo (light)" alt="RITS logo light">
+       <!-- Use the transparent globe image everywhere; hero wordmark/tagline shown below -->
+       <img class="logo-svg logo-svg-dark" src="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }}"
+         srcset="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 2x, {{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 3x"
+         aria-label="RITS Services logo" alt="RITS logo">
+       <img class="logo-svg logo-svg-light" src="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }}"
+         srcset="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 2x, {{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 3x"
+         aria-label="RITS Services logo (light)" alt="RITS logo light">
     </div>
-    <div class="logo-wordmark"></div>
-    <div class="logo-tagline"></div>
+    <div class="logo-wordmark">RITS SERVICES</div>
+    <div class="logo-tagline">Reachable to all</div>
     <div class="address">{{ t.hero.address }}</div>
   </div>
 </section>

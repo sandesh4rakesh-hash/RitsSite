@@ -273,8 +273,15 @@ def logout():
 def images_file(filename):
     images_dir = os.path.join(app.root_path, 'Images')
     # Provide fallbacks for filenames that may not exactly match uploaded files
-    # Map friendly names to actual files present in Images/ (keep minimal)
-    fallback_map = {}
+    # Map friendly names to actual files present in Images/
+    fallback_map = {
+        'RitsLogoLight.png': 'Ritslog4.png',
+        'RitsLogoLight.jpg': 'Ritslog4.png',
+        'RitsLogoLight.jpeg': 'Ritslog4.png',
+        # friendly name the designer asked to use across the site — map to existing file
+        'Rits_Globe_Arrow_Transparent.png': 'ritslogo-Dark.png',
+        'rits_globe_arrow_transparent.png': 'ritslogo-Dark.png',
+    }
     requested = filename
     full_path = os.path.join(images_dir, requested)
     if not os.path.exists(full_path):

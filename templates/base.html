@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }}" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }}">
 <script>
 /* apply saved theme before paint to avoid flash */
 (function(){
@@ -38,13 +40,17 @@
 
 <nav class="topbar">
   <a href="{{ url_for('home') }}" class="brand">
-    <!-- Dark / default mini logo -->
-    <img class="mini-logo mini-logo-dark" src="{{ url_for('images_file', filename='Ritslog.png') }}" alt="RITS logo">
-    <!-- Light-theme mini logo (uses RitsLogoLight.png) -->
-    <img class="mini-logo mini-logo-light" src="{{ url_for('images_file', filename='RitsLogoLight.png') }}" alt="RITS logo light">
+        <!-- Dark / default mini logo -->
+        <img class="mini-logo mini-logo-dark" src="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }}"
+          srcset="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 2x, {{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 3x"
+          width="48" height="48" alt="RITS logo">
+        <!-- Light-theme mini logo (same transparent globe for light) -->
+        <img class="mini-logo mini-logo-light" src="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }}"
+          srcset="{{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 2x, {{ url_for('images_file', filename='Rits_Globe_Arrow_Transparent.png') }} 3x"
+          width="48" height="48" alt="RITS logo light">
     <div>
       <div class="brand-name">RITS SERVICES</div>
-      <div class="brand-tag">{{ t.hero.tagline[:18] }}</div>
+      <div class="brand-tag">Reachable to all</div>
     </div>
   </a>
 
