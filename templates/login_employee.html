@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ t.portal.employee }}{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <span class="tag">EMPLOYEE PORTAL</span>
+  <h1>{{ t.portal.employee }} <span class="accent">(LDAP)</span></h1>
+</div>
+
+<div class="panel auth-box">
+  <h2>Sign in</h2>
+  <div class="auth-sub">Use your corporate LDAP username and password.</div>
+  <form method="post" class="form-grid">
+    <div>
+      <label for="username">LDAP Username</label>
+      <input id="username" name="username" type="text" required autocomplete="username" placeholder="e.g. admin">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+    </div>
+    <button type="submit" class="btn-primary" style="justify-content:center">{{ t.portal.ldap_btn }} <span class="arrow-circle">→</span></button>
+  </form>
+
+  {% if not ldap_configured %}
+  <div class="demo-note">
+    <strong>Demo mode</strong> — no LDAP server configured. Try:<br>
+    username <code>admin</code> / password <code>admin123</code><br>
+    username <code>employee</code> / password <code>rits@2026</code><br>
+    To connect a real directory, set <code>LDAP_SERVER</code>, <code>LDAP_BASE_DN</code> and install <code>ldap3</code>.
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}

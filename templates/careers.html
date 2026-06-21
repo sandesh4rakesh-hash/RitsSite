@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ t.nav.careers }}{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <span class="tag">JOIN US</span>
+  <h1>{{ t.nav.careers }} at <span class="accent">RITS Services</span></h1>
+  <p>Work on real products for real businesses. We are a small, friendly team in New Delhi that values craftsmanship over hours.</p>
+</div>
+
+<div class="panel job">
+  <div>
+    <h3>Senior Python Developer</h3>
+    <div class="job-meta">Full-time · New Delhi (Hybrid) · 4+ years · Flask / Django, PostgreSQL, AWS</div>
+  </div>
+  <a href="{{ url_for('contact') }}" class="btn-secondary">Apply <span class="arrow-circle">→</span></a>
+</div>
+<div class="panel job">
+  <div>
+    <h3>Flutter Mobile Developer</h3>
+    <div class="job-meta">Full-time · New Delhi (Hybrid) · 2+ years · Flutter, Firebase, REST APIs</div>
+  </div>
+  <a href="{{ url_for('contact') }}" class="btn-secondary">Apply <span class="arrow-circle">→</span></a>
+</div>
+<div class="panel job">
+  <div>
+    <h3>UI / UX Designer</h3>
+    <div class="job-meta">Full-time · Remote (India) · 2+ years · Figma, design systems, responsive web</div>
+  </div>
+  <a href="{{ url_for('contact') }}" class="btn-secondary">Apply <span class="arrow-circle">→</span></a>
+</div>
+<div class="panel job">
+  <div>
+    <h3>Business Development Executive</h3>
+    <div class="job-meta">Full-time · New Delhi (On-site) · 1+ years · Client relations, IT sales</div>
+  </div>
+  <a href="{{ url_for('contact') }}" class="btn-secondary">Apply <span class="arrow-circle">→</span></a>
+</div>
+
+<div class="grid-3 section-gap">
+  <div class="panel card"><h3>Learning Budget</h3><p>Annual allowance for courses, books and conferences — keep growing your skills.</p></div>
+  <div class="panel card"><h3>Flexible Hours</h3><p>Hybrid working with flexible hours. We measure outcomes, not seat time.</p></div>
+  <div class="panel card"><h3>Health Cover</h3><p>Medical insurance for you and your family from day one.</p></div>
+</div>
+
+{% endblock %}

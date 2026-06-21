@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{ t.nav.industries }}{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <span class="tag">WHO WE SERVE</span>
+  <h1>{{ t.nav.industries }} We <span class="accent">Empower</span></h1>
+  <p>{{ t.trusted }}</p>
+</div>
+
+<div class="grid-3">
+  <div class="panel card hoverable">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.6 12 20l-7.5-7.4A5 5 0 0 1 12 6.1a5 5 0 0 1 7.5 6.5Z"/><path d="M4 12h4l2-3 2.5 5 1.5-2h6"/></svg></div>
+    <h3>{{ t.industries[0] }}</h3>
+    <p>Clinic management, appointment booking, patient records and pharmacy billing systems built for Indian healthcare providers.</p>
+  </div>
+  <div class="panel card hoverable">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11.5v4.5c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v5"/></svg></div>
+    <h3>{{ t.industries[1] }}</h3>
+    <p>School ERPs, online learning portals, fee management and parent communication apps for schools and coaching institutes.</p>
+  </div>
+  <div class="panel card hoverable">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6l2-8H7"/></svg></div>
+    <h3>{{ t.industries[2] }}</h3>
+    <p>Online stores, payment gateway integration, inventory sync and order management for sellers of every size.</p>
+  </div>
+  <div class="panel card hoverable">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3.5" width="12" height="17" rx="1.5"/><path d="M9.5 7.5h1.5M13 7.5h1.5M9.5 11h1.5M13 11h1.5M9.5 14.5h1.5M13 14.5h1.5M10.5 20.5v-3h3v3"/></svg></div>
+    <h3>{{ t.industries[3] }}</h3>
+    <p>Property listing portals, CRM for brokers, site-visit scheduling and rental management software.</p>
+  </div>
+  <div class="panel card hoverable">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M4 9.5h16M5.5 9.5V17M9.8 9.5V17M14.2 9.5V17M18.5 9.5V17M3.5 17h17M2.5 20h19"/></svg></div>
+    <h3>{{ t.industries[4] }}</h3>
+    <p>Accounting integrations, loan management, secure customer portals and compliance-ready reporting tools.</p>
+  </div>
+  <div class="panel card hoverable">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="1.7"/><circle cx="16.5" cy="17.5" r="1.7"/></svg></div>
+    <h3>{{ t.industries[5] }}</h3>
+    <p>Fleet tracking, delivery management, route optimisation and warehouse software for logistics operators.</p>
+  </div>
+</div>
+
+{% endblock %}

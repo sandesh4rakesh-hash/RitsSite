@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}{{ t.nav.about }}{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <span class="tag">WHO WE ARE</span>
+  <h1>{{ t.nav.about }} — Building Software, <span class="accent">Building Trust</span></h1>
+  <p>RITS Services is a New Delhi based software company helping small and medium businesses grow with custom software, mobile apps, cloud solutions and digital transformation. We are reachable to all.</p>
+</div>
+
+<div class="grid-3">
+  <div class="panel card center"><div class="stat-number">120+</div><div class="stat-label">Projects Delivered</div></div>
+  <div class="panel card center"><div class="stat-number">85+</div><div class="stat-label">Happy Clients</div></div>
+  <div class="panel card center"><div class="stat-number">10+</div><div class="stat-label">Years of Experience</div></div>
+</div>
+
+<div class="grid-2 section-gap">
+  <div class="panel card">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div>
+    <h3>Our Mission</h3>
+    <p>To make powerful, affordable software accessible to every business — from a single-shop owner in Tughlakabad to a growing enterprise across India. We believe technology should remove barriers, not create them.</p>
+  </div>
+  <div class="panel card">
+    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+    <h3>Our Vision</h3>
+    <p>To be the most trusted digital transformation partner for small and medium businesses in India — known for honest pricing, quality engineering and long-term support.</p>
+  </div>
+</div>
+
+<div class="grid-3 section-gap">
+  <div class="panel card hoverable">
+    <h3>Quality First</h3>
+    <p>Every line of code is reviewed, tested and documented. We ship software you can rely on for years.</p>
+  </div>
+  <div class="panel card hoverable">
+    <h3>Transparent Pricing</h3>
+    <p>Clear quotes, no hidden costs, milestone-based payments. You always know what you are paying for.</p>
+  </div>
+  <div class="panel card hoverable">
+    <h3>Long-term Partnership</h3>
+    <p>We stay with you after launch — support, maintenance, and upgrades as your business grows.</p>
+  </div>
+</div>
+
+<div class="panel card section-gap center" style="padding:44px">
+  <h3 style="font-size:22px;margin-bottom:10px">Want to know more about how we work?</h3>
+  <p style="margin-bottom:24px">Get a free consultation — no commitment required.</p>
+  <a href="{{ url_for('contact') }}" class="btn-primary">{{ t.hero.cta_primary }} <span class="arrow-circle">→</span></a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ t.nav.portfolio }}{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <span class="tag">OUR WORK</span>
+  <h1>Our <span class="accent">{{ t.nav.portfolio }}</span></h1>
+  <p>A selection of projects we have delivered for businesses across India.</p>
+</div>
+
+<div class="grid-3">
+  <div class="panel card hoverable">
+    <span class="tag">Healthcare</span>
+    <h3>CarePoint Clinic Suite</h3>
+    <p>Appointment booking, e-prescriptions and billing platform serving a chain of 12 clinics in Delhi NCR. Reduced front-desk workload by 40%.</p>
+  </div>
+  <div class="panel card hoverable">
+    <span class="tag">E-commerce</span>
+    <h3>BazaarKart Store</h3>
+    <p>Multi-vendor e-commerce store with UPI payments, real-time inventory sync and a delivery partner app. 25,000+ orders processed in the first year.</p>
+  </div>
+  <div class="panel card hoverable">
+    <span class="tag">Education</span>
+    <h3>VidyaLink School ERP</h3>
+    <p>Complete school management — admissions, attendance, fees and a parent mobile app — deployed across 8 schools.</p>
+  </div>
+  <div class="panel card hoverable">
+    <span class="tag">Logistics</span>
+    <h3>FleetTrak Pro</h3>
+    <p>GPS fleet tracking and delivery-proof system for a 150-vehicle logistics operator, with live route optimisation dashboards.</p>
+  </div>
+  <div class="panel card hoverable">
+    <span class="tag">Real Estate</span>
+    <h3>PropDesk CRM</h3>
+    <p>Lead management and site-visit scheduling CRM for property brokers, integrated with WhatsApp and IVR calling.</p>
+  </div>
+  <div class="panel card hoverable">
+    <span class="tag">Finance</span>
+    <h3>LoanLedger</h3>
+    <p>NBFC loan origination and EMI collection platform with maker-checker workflows and compliance reporting.</p>
+  </div>
+</div>
+
+<div class="panel card section-gap center" style="padding:44px">
+  <h3 style="font-size:22px;margin-bottom:10px">Have a similar project in mind?</h3>
+  <p style="margin-bottom:24px">We would love to show you a detailed case study and a live demo.</p>
+  <a href="{{ url_for('contact') }}" class="btn-primary">{{ t.hero.cta_primary }} <span class="arrow-circle">→</span></a>
+</div>
+
+{% endblock %}

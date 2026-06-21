@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Employee Dashboard{% endblock %}
+{% block content %}
+
+<div class="page-head" style="padding-bottom:20px">
+  <span class="tag">EMPLOYEE PORTAL</span>
+  <h1>Welcome, <span class="accent">{{ user.name }}</span></h1>
+</div>
+
+<div class="panel dash-head">
+  <div class="avatar">{{ user.name[0] }}</div>
+  <div>
+    <h2>{{ user.name }}</h2>
+    <div class="role">{{ user.role }} · Signed in via LDAP ({{ user.username }})</div>
+  </div>
+  <a href="{{ url_for('logout') }}" class="btn-secondary" style="margin-left:auto">{{ t.nav.logout }}</a>
+</div>
+
+<div class="grid-3">
+  <div class="panel card hoverable"><h3>📋 My Tasks</h3><p>4 open tasks this sprint. Next due: API integration review — Friday.</p></div>
+  <div class="panel card hoverable"><h3>🕒 Attendance</h3><p>This month: 9 days present, 0 leaves. Shift: 9:30 AM – 6:30 PM.</p></div>
+  <div class="panel card hoverable"><h3>💰 Payslips</h3><p>May 2026 payslip is available. Download from the HR document vault.</p></div>
+  <div class="panel card hoverable"><h3>📅 Leave Balance</h3><p>Casual: 6 · Sick: 5 · Earned: 12. Apply for leave with one click.</p></div>
+  <div class="panel card hoverable"><h3>📢 Announcements</h3><p>Quarterly town-hall on 20 June. New health-insurance partner onboarded.</p></div>
+  <div class="panel card hoverable"><h3>🎓 Training</h3><p>2 assigned courses pending: Cloud Security Basics, Effective Code Review.</p></div>
+</div>
+
+{% endblock %}

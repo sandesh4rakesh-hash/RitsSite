@@ -1,0 +1,16 @@
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+contact_messages.log
+.env
+.vscode/
+Images/
+*.sqlite3
+instance/
+build/
+dist/
+*.egg-info/

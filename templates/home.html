@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{ t.nav.home }}{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div>
+    <span class="badge">{{ t.hero.badge }}</span>
+    <h1 class="hero-title">{{ t.hero.title_1 }} <span class="accent">{{ t.hero.title_accent }}</span> {{ t.hero.title_2 }}</h1>
+    <p class="hero-sub">{{ t.hero.subtitle }}</p>
+    <div class="hero-cta">
+      <a href="{{ url_for('contact') }}" class="btn-primary">{{ t.hero.cta_primary }} <span class="arrow-circle">→</span></a>
+      <a href="{{ url_for('services') }}" class="btn-secondary">{{ t.hero.cta_secondary }} <span class="arrow-circle">→</span></a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="orbit">
+      <!-- Dark-theme / default logo image -->
+      <img class="logo-svg logo-svg-dark" src="{{ url_for('images_file', filename='Ritslog.png') }}" aria-label="RITS Services logo" alt="RITS logo">
+      <!-- Light-theme raster logo (optional) - shown only in light theme -->
+      <img class="logo-svg logo-svg-light" src="{{ url_for('images_file', filename='RitsLogoLight.png') }}" aria-label="RITS Services logo (light)" alt="RITS logo light">
+    </div>
+    <div class="logo-wordmark"></div>
+    <div class="logo-tagline"></div>
+    <div class="address">{{ t.hero.address }}</div>
+  </div>
+</section>
+
+<section class="panel services-grid">
+  <div class="service">
+    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M13.5 5l-3 14"/></svg></div>
+    <h3>{{ t.services.s1_t }}</h3><p>{{ t.services.s1_d }}</p><div class="underline"></div>
+  </div>
+  <div class="service">
+    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/></svg></div>
+    <h3>{{ t.services.s2_t }}</h3><p>{{ t.services.s2_d }}</p><div class="underline"></div>
+  </div>
+  <div class="service">
+    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 1 1 .6-8.96 6 6 0 0 1 11.3 2.2A3.9 3.9 0 0 1 18.5 18H7Z"/></svg></div>
+    <h3>{{ t.services.s3_t }}</h3><p>{{ t.services.s3_d }}</p><div class="underline"></div>
+  </div>
+  <div class="service">
+    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="13" width="3.4" height="7" rx=".7"/><rect x="10.3" y="9" width="3.4" height="11" rx=".7"/><rect x="16.6" y="5" width="3.4" height="15" rx=".7"/></svg></div>
+    <h3>{{ t.services.s4_t }}</h3><p>{{ t.services.s4_d }}</p><div class="underline"></div>
+  </div>
+  <div class="service">
+    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6.5" rx="2"/><rect x="17" y="13" width="4" height="6.5" rx="2"/><path d="M19 19.5a3.5 3.5 0 0 1-3.5 3h-2"/></svg></div>
+    <h3>{{ t.services.s5_t }}</h3><p>{{ t.services.s5_d }}</p><div class="underline"></div>
+  </div>
+</section>
+
+<section class="panel trusted">
+  <div class="trusted-title">{{ t.trusted }}</div>
+  <div class="industries-strip">
+    <a class="industry" href="{{ url_for('industries') }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.6 12 20l-7.5-7.4A5 5 0 0 1 12 6.1a5 5 0 0 1 7.5 6.5Z"/><path d="M4 12h4l2-3 2.5 5 1.5-2h6"/></svg>{{ t.industries[0] }}</a>
+    <a class="industry" href="{{ url_for('industries') }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11.5v4.5c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v5"/></svg>{{ t.industries[1] }}</a>
+    <a class="industry" href="{{ url_for('industries') }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6l2-8H7"/></svg>{{ t.industries[2] }}</a>
+    <a class="industry" href="{{ url_for('industries') }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3.5" width="12" height="17" rx="1.5"/><path d="M9.5 7.5h1.5M13 7.5h1.5M9.5 11h1.5M13 11h1.5M9.5 14.5h1.5M13 14.5h1.5M10.5 20.5v-3h3v3"/></svg>{{ t.industries[3] }}</a>
+    <a class="industry" href="{{ url_for('industries') }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M4 9.5h16M5.5 9.5V17M9.8 9.5V17M14.2 9.5V17M18.5 9.5V17M3.5 17h17M2.5 20h19"/></svg>{{ t.industries[4] }}</a>
+    <a class="industry" href="{{ url_for('industries') }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="1.7"/><circle cx="16.5" cy="17.5" r="1.7"/></svg>{{ t.industries[5] }}</a>
+  </div>
+</section>
+
+{% endblock %}

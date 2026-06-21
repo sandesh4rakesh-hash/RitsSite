@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Customer Dashboard{% endblock %}
+{% block content %}
+
+<div class="page-head" style="padding-bottom:20px">
+  <span class="tag">CUSTOMER PORTAL</span>
+  <h1>Welcome, <span class="accent">{{ user.name }}</span></h1>
+</div>
+
+<div class="panel dash-head">
+  <div class="avatar">{{ user.name[0] }}</div>
+  <div>
+    <h2>{{ user.name }}</h2>
+    <div class="role">Customer · Signed in with Google ({{ user.email }})</div>
+  </div>
+  <a href="{{ url_for('logout') }}" class="btn-secondary" style="margin-left:auto">{{ t.nav.logout }}</a>
+</div>
+
+<div class="grid-3">
+  <div class="panel card hoverable"><h3>🚀 My Projects</h3><p>1 active project: "Company Website Revamp" — currently in development, 65% complete.</p></div>
+  <div class="panel card hoverable"><h3>🧾 Invoices</h3><p>Latest invoice INV-2026-041 (₹45,000) — paid. No dues outstanding.</p></div>
+  <div class="panel card hoverable"><h3>🎫 Support Tickets</h3><p>0 open tickets. Average response time on your account: 2.1 hours.</p></div>
+  <div class="panel card hoverable"><h3>📁 Deliverables</h3><p>3 files shared with you this month, including the latest staging build link.</p></div>
+  <div class="panel card hoverable"><h3>🗓 Next Meeting</h3><p>Sprint demo scheduled: Tuesday 17 June, 4:00 PM IST (Google Meet).</p></div>
+  <div class="panel card hoverable"><h3>💬 Need Help?</h3><p>Raise a ticket or message your project manager directly from here.</p></div>
+</div>
+
+{% endblock %}

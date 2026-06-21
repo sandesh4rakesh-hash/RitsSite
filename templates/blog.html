@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ t.nav.blog }}{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <span class="tag">INSIGHTS</span>
+  <h1>RITS <span class="accent">{{ t.nav.blog }}</span></h1>
+  <p>Practical articles on software, cloud and digital growth for small and medium businesses.</p>
+</div>
+
+<div class="grid-3">
+  <div class="panel card hoverable">
+    <div class="post-meta">10 June 2026 · Cloud</div>
+    <h3>5 Signs Your Business Is Ready to Move to the Cloud</h3>
+    <p>Rising server costs, remote teams, and data-loss scares — here is how to know when migration makes financial sense, and how to plan it without downtime.</p>
+    <a class="read-more" href="{{ url_for('contact') }}">Read more →</a>
+  </div>
+  <div class="panel card hoverable">
+    <div class="post-meta">28 May 2026 · Mobile</div>
+    <h3>Native vs Cross-Platform Apps: What SMBs Should Choose in 2026</h3>
+    <p>Flutter and React Native have matured. We compare cost, performance and maintenance so you can pick the right approach for your budget.</p>
+    <a class="read-more" href="{{ url_for('contact') }}">Read more →</a>
+  </div>
+  <div class="panel card hoverable">
+    <div class="post-meta">15 May 2026 · Security</div>
+    <h3>A Simple Security Checklist for Small Business Websites</h3>
+    <p>HTTPS, backups, updates and access control — ten low-cost steps that prevent the most common attacks on SMB websites.</p>
+    <a class="read-more" href="{{ url_for('contact') }}">Read more →</a>
+  </div>
+  <div class="panel card hoverable">
+    <div class="post-meta">02 May 2026 · Digital Transformation</div>
+    <h3>Going Paperless: A 30-Day Plan for Indian SMBs</h3>
+    <p>From GST invoices to attendance registers — a step-by-step plan to digitise your daily operations in one month.</p>
+    <a class="read-more" href="{{ url_for('contact') }}">Read more →</a>
+  </div>
+  <div class="panel card hoverable">
+    <div class="post-meta">18 April 2026 · Software</div>
+    <h3>Custom Software vs Off-the-Shelf: A Cost Comparison</h3>
+    <p>When does building custom software pay off? We break down the real 3-year cost of both options with examples.</p>
+    <a class="read-more" href="{{ url_for('contact') }}">Read more →</a>
+  </div>
+  <div class="panel card hoverable">
+    <div class="post-meta">05 April 2026 · AI</div>
+    <h3>Practical AI for Small Businesses (No Hype Edition)</h3>
+    <p>Chat assistants, invoice OCR and demand forecasting — three AI use-cases that actually deliver ROI for SMBs today.</p>
+    <a class="read-more" href="{{ url_for('contact') }}">Read more →</a>
+  </div>
+</div>
+
+{% endblock %}
