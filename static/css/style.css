@@ -295,8 +295,11 @@ textarea{min-height:140px;resize:vertical}
 .social-label{font-size:12px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
 .social-links{display:flex;align-items:center;gap:10px;padding:0;margin:0;list-style:none}
 .social-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 12px;border-radius:12px;color:var(--accent);text-decoration:none;border:1px solid rgba(255,255,255,0.03);transition:all .18s;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px)}
-.social-link:hover{color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 8px 20px rgba(15,90,180,.28);transform:translateY(-4px)}
-.social-icon{width:20px;height:20px;flex:none;color:var(--accent)}
+.social-link:hover{color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 12px 26px rgba(15,90,180,.36);transform:translateY(-4px);border-color:rgba(255,255,255,.08)}
+.social-link:hover .social-icon{color:#fff}
+.social-icon{width:22px;height:22px;flex:none;color:var(--accent);transition:color .16s,transform .16s}
+.social-link:focus-visible{outline:3px solid rgba(25,140,255,.22);outline-offset:4px;border-radius:12px}
+.social-link:active{transform:translateY(-2px);box-shadow:0 8px 18px rgba(10,70,140,.28)}
 .social-link .sr-only{position:static;width:auto;height:auto;margin-left:8px;color:var(--text-soft);font-weight:600}
 .footer-bottom{width:100%;text-align:center}
 .address{font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--text-muted);border-bottom:none;padding-bottom:0}
