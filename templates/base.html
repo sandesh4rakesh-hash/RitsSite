@@ -135,14 +135,29 @@
 {% block content %}{% endblock %}
 
 <footer class="site-footer">
-  <div class="footer-left">© {{ now.year }} RITS Services — {{ t.hero.tagline }} {{ t.footer_rights }}</div>
-  <div class="footer-right">
-    <div class="social-ecosystem"><strong>Social Ecosystem</strong></div>
-    <ul class="social-links">
-      <li>📸 <a href="https://instagram.com/ritsservices" target="_blank" rel="noopener">Instagram: @ritsservices</a></li>
-      <li>🐦 <a href="https://x.com/ritsservicescom" target="_blank" rel="noopener">X / Twitter: @ritsservicescom</a></li>
-      <li>📺 <a href="https://youtube.com/@ritsservices" target="_blank" rel="noopener">YouTube: @ritsservices</a></li>
-    </ul>
+  <div class="footer-top">
+    <div class="footer-left">© {{ now.year }} RITS Services — {{ t.hero.tagline }} {{ t.footer_rights }}</div>
+    <div class="footer-right">
+      <div class="social-bar" aria-label="Social Ecosystem">
+        <span class="social-label">Social</span>
+        <nav class="social-links" aria-label="Social links">
+          <a class="social-link" href="https://instagram.com/ritsservices" target="_blank" rel="noopener" title="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.2"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a class="social-link" href="https://x.com/ritsservicescom" target="_blank" rel="noopener" title="X (Twitter)">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 7.5c-.55.25-1.13.42-1.75.5.63-.38 1.12-.98 1.35-1.7-.6.36-1.27.62-1.99.76C16.7 6.5 15.85 6 15 6c-1.63 0-2.95 1.33-2.95 2.96 0 .23.03.45.08.66C9.1 9.45 6.2 8.02 4.2 5.43c-.25.43-.4.93-.4 1.46 0 1.01.52 1.9 1.31 2.42-.48-.02-.94-.15-1.34-.37v.04c0 1.42 1.01 2.6 2.35 2.87-.25.07-.5.11-.77.11-.19 0-.38-.02-.56-.05.38 1.18 1.49 2.04 2.8 2.07C7.6 15.9 6.22 16.5 4.73 16.5c-.3 0-.6-.02-.89-.05C4.9 17.34 6.32 18 8 18c4.8 0 7.45-4 7.45-7.45v-.34c.5-.36.93-.82 1.27-1.33-.45.2-.93.33-1.44.39z"/></svg>
+            <span class="sr-only">X</span>
+          </a>
+          <a class="social-link" href="https://youtube.com/@ritsservices" target="_blank" rel="noopener" title="YouTube">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg>
+            <span class="sr-only">YouTube</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
     <div class="address">{{ t.hero.address }}</div>
   </div>
 </footer>
